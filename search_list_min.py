@@ -1,6 +1,9 @@
 import time
 import random
 
+#要注意要求：如果要求了返回位置，可以用i做索引位置；不然直接做元素比较会更好。
+
+
 alist = []
 
 # def find_min(alist):
@@ -57,7 +60,7 @@ def getmin(alist):
     return min
 
 listlength = 10
-a = random.sample(range(1,listlength * 100),listlength)
+a = random.sample(range(1,listlength * 100),listlength) # random.sample(range , 元素个数）
 start = time.time()
 # b = find_min(a)
 b = getmin(a)
