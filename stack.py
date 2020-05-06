@@ -91,20 +91,22 @@ class Stack:
 # decimal convert to binary
 # the firt solution of dividing is the last number of answer
 # so we use a stack
-def divideBy2 (decNumber) :
-    remstack = Stack()
+# def divideBy2 (decNumber) :
+#     remstack = Stack()
 
-    while decNumber > 0:
-         rem = decNumber % 2
-         remstack.push(rem)
-         decNumber // 2
+#     while decNumber > 0:
+#          rem = decNumber % 2
+#          remstack.push(rem)
+#          decNumber // 2
 
-    decsting = ''
-    while not remstack.isEmpty() :
-        decsting = decsting + str(remstack.pop())
+#     decsting = ''
+#     while not remstack.isEmpty() :
+#         decsting = decsting + str(remstack.pop())
 
-    return decsting
+#     return decsting
 
 
-print(divideBy2(12))
+# print(divideBy2(12))
+
+# 全括号中缀表达式
 
