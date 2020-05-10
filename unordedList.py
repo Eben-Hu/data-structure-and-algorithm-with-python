@@ -7,7 +7,7 @@
 class Node:
     def __init__(self, initdata):
         self.data = initdata
-        self.next = None
+        self.next = None   #默认是none
     
     def getData(self):
         return self.data
