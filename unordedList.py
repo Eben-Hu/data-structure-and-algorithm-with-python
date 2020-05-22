@@ -22,12 +22,12 @@ class Node:
         self.next = newnext
 
 
-class UnorderedList():
+class UnorderedList():  # 链表的结构：head+第一个node+第二个node+……+最后的node
     def __init__(self):
         self.head = None
     
     def add(self, item): #加在表头
-        temp = Node(item)
+        temp = Node(item)  # temp只是一个载体，用来承载要添加为新表头的node的信息
         temp.setNext(self.head)  # 注意这里的顺序，先把原表头的信息复制过来，然后再更新表头信息
         self.head = temp
     
@@ -59,7 +59,7 @@ class UnorderedList():
             else:
                 previous = current
                 current = current.getNext()
-        if previous == None:
+        if previous == None:  # 如果第一个node中的data就是要删掉的
             self.head = current.getNext()
         else:
             previous.setNext(current.getNext())
@@ -73,7 +73,7 @@ class UnorderedList():
             else:
                 current = current.getNext()
         temp = Node(item)
-        temp.setData(item)
+        temp.setData(item)  #这个多余了吧？
         current.setNext(temp)
 
     def isEmpty(self):
