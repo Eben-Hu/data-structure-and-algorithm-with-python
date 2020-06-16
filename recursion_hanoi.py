@@ -8,3 +8,5 @@ def moveDisk(disk, fromPole, toPole):
     print(f"Moving disk [{disk}] from {fromPole} to {toPole}")
 
 moveTower(3,'#1','#2','#3')
+
+
