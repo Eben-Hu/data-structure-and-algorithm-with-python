@@ -1,7 +1,7 @@
 # here is the defination of class Stack
 # last in first out 
 # the end of list is the end of stack
-class Stack:
+class Stack:  #堆栈的列表构造
     def __init__(self):
         self.items = []  # use a list to build a stack
     
@@ -34,6 +34,30 @@ class Stack:
 # # print(s.size())
 
 # # test is ok
+
+# 接下来用链表实现堆栈功能：
+# the definition of node
+class Node: # node is the element of an unorderedlist
+    def __init__(self, initdata):
+        self.data = initdata
+        self.next = None   #默认是none
+    
+    def getData(self):
+        return self.data
+    
+    def getNext(self):
+        return self.next
+    
+    def setData(self, newdata):
+        self.data = newdata
+    
+    def setNext(self, newnext):
+        self.next = newnext
+    
+class Stack2:
+    def __init__(self):
+        self.head = None
+
 
 # # brackets matching:
 # def parChecker(symbolString):
