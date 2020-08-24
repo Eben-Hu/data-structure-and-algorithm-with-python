@@ -4,7 +4,7 @@
 无序表包含的head起到指向第一个节点的作用
 '''
 # the definition of node
-class Node:
+class Node: # node is the element of an unorderedlist
     def __init__(self, initdata):
         self.data = initdata
         self.next = None   #默认是none
@@ -24,12 +24,12 @@ class Node:
 
 class UnorderedList():  # 链表的结构：head+第一个node+第二个node+……+最后的node
     def __init__(self):
-        self.head = None
+        self.head = None  # 构造链表的head
     
     def add(self, item): #加在表头
-        temp = Node(item)  # temp只是一个载体，用来承载要添加为新表头的node的信息
-        temp.setNext(self.head)  # 注意这里的顺序，先把原表头的信息复制过来，然后再更新表头信息
-        self.head = temp
+        temp = Node(item)  # temp是新的节点，用来存储添加的信息以及原来第一个节点的pointer
+        temp.setNext(self.head)  # 注意这里的顺序，先把原第一个节点的位置（由head指向）放在新的第一个节点里面
+        self.head = temp # 再将head指向新构造的节点
     
     def size(self):
         current = self.head
